@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  div(class="container")
+    div(class="row")
+      h1= title
+      p= message
+      form(role="form",action="./gps")
+        div(class="form-group")
+          label(for="name") Your Name
+          input(type="text", class="form-control", id="name", name="name", placeholder="Your name" value="#{name}")
+        button(type="submit",class="btn btn-primary") Continue
